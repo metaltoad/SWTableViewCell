@@ -7,7 +7,6 @@
 //
 
 #import "SWTableViewCell.h"
-#import "SWUtilityButtonView.h"
 
 static NSString * const kTableViewCellContentView = @"UITableViewCellContentView";
 
@@ -25,7 +24,6 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
 @property (nonatomic, assign) CGFloat additionalRightPadding;
 
 @property (nonatomic, strong) UIScrollView *cellScrollView;
-@property (nonatomic, strong) SWUtilityButtonView *leftUtilityButtonsView, *rightUtilityButtonsView;
 @property (nonatomic, strong) UIView *leftUtilityClipView, *rightUtilityClipView;
 @property (nonatomic, strong) NSLayoutConstraint *leftUtilityClipConstraint, *rightUtilityClipConstraint;
 
@@ -301,7 +299,9 @@ static NSString * const kTableViewPanState = @"state";
 
 - (void)layoutSubviews
 {
+    layoutUpdating = YES;
     [super layoutSubviews];
+    layoutUpdating = NO;
     
     // Offset the contentView origin so that it appears correctly w/rt the enclosing scroll view (to which we moved it).
     CGRect frame = self.contentView.frame;

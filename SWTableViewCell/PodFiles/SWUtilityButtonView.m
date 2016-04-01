@@ -11,7 +11,6 @@
 
 @interface SWUtilityButtonView()
 
-@property (nonatomic, strong) NSLayoutConstraint *widthConstraint;
 @property (nonatomic, strong) NSMutableArray *buttonBackgroundColors;
 
 @end
