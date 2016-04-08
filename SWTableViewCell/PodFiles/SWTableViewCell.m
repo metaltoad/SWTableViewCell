@@ -23,7 +23,6 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
 @property (nonatomic, assign) SWCellState cellState; // The state of the cell within the scroll view, can be left, right or middle
 @property (nonatomic, assign) CGFloat additionalRightPadding;
 
-@property (nonatomic, strong) UIScrollView *cellScrollView;
 @property (nonatomic, strong) UIView *leftUtilityClipView, *rightUtilityClipView;
 @property (nonatomic, strong) NSLayoutConstraint *leftUtilityClipConstraint, *rightUtilityClipConstraint;
 
