@@ -504,7 +504,7 @@ static NSString * const kTableViewPanState = @"state";
 {
     if (_cellState != kCellStateCenter)
     {
-        [self.cellScrollView setContentOffset:[self contentOffsetForCellState:kCellStateCenter] animated:animated];
+        [self.cellScrollView setContentOffset:[self contentOffsetForCellState:kCellStateLeft] animated:animated];
     }
 }
 
