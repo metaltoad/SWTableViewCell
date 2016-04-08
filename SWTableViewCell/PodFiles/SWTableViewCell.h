@@ -41,16 +41,14 @@ typedef NS_ENUM(NSInteger, SWCellState)
 @property (nonatomic, copy) NSArray *leftUtilityButtons;
 @property (nonatomic, copy) NSArray *rightUtilityButtons;
 @property (nonatomic, strong) SWUtilityButtonView *leftUtilityButtonsView, *rightUtilityButtonsView;
-@property (nonatomic, strong) UIScrollView *cellScrollView;
-
 @property (nonatomic, weak) id <SWTableViewCellDelegate> delegate;
 
 - (void)setRightUtilityButtons:(NSArray *)rightUtilityButtons WithButtonWidth:(CGFloat) width;
 - (void)setLeftUtilityButtons:(NSArray *)leftUtilityButtons WithButtonWidth:(CGFloat) width;
 - (void)hideUtilityButtonsAnimated:(BOOL)animated;
+- (void)hideUtilityButtonsAnimatedNoCallback:(BOOL)animated;
 - (void)showLeftUtilityButtonsAnimated:(BOOL)animated;
 - (void)showRightUtilityButtonsAnimated:(BOOL)animated;
-- (CGPoint)contentOffsetForCellState:(SWCellState)state;
 
 - (BOOL)isUtilityButtonsHidden;
 
